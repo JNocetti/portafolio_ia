@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar-title {
+    font-size: 1.5em;
+}
+
+.navbar-buttons {
+    display: flex;
+}
+
+.navbar-button {
+    background-color: #555;
+    border: none;
+    color: #fff;
+    padding: 10px 20px; /* Increased padding for more space */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    min-width: 120px; /* Ensure the button has enough width */
+    text-align: center;
+}
+
+.navbar-button:hover {
+    background-color: #777;
+}
+
+.info-button {
+    background-color: #007bff;
+}
+
+.info-button:hover {
+    background-color: #0056b3;
+}
+
+/* Section: Sobre mí */
+.about-me {
+    text-align: center;
+    padding: 50px;
+    background-color: #ffffff;
+    margin-top: 60px; /* Adjust margin to prevent content overlap with navbar */
+}
+
+.about-me h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.about-me p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Section: Unidades del Curso */
+.course-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.course-section h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.unit-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.unit-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.unit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.unit-card h3 {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.unit-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar-title {
+        font-size: 1.2em;
+    }
+
+    .navbar-buttons {
+        width: 100%;
+        justify-content: flex-start; /* Align buttons to the left */
+        margin-top: 10px;
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .navbar-button {
+        width: auto; /* Allow button width to adjust automatically */
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .about-me {
+        padding: 30px;
+    }
+
+    .about-me h1 {
+        font-size: 2em;
+    }
+
+    .about-me p {
+        font-size: 1em;
+    }
+
+    .unit-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .unit-card {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-title {
+        font-size: 1em;
+    }
+
+    .navbar-button {
+        padding: 8px 15px;
+    }
+
+    .about-me {
+        padding: 20px;
+    }
+
+    .about-me h1 {
+        font-size: 1.5em;
+    }
+
+    .about-me p {
+        font-size: 0.9em;
+    }
+
+    .unit-card {
+        width: 100%;
+        padding: 15px;
+    }
+}
