@@ -4,40 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio IA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+       
+    </style>
 </head>
 <body>
-
-    <nav class="navbar">
-        <div class="navbar-title">Portafolio de Inteligencia Artificial</div>
-        <div class="navbar-buttons">
-            <button class="navbar-button">Común</button>
-            <button class="navbar-button info-button">Información</button>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand mx-auto">
+                <img src="assets/profile.jpeg" alt="Perfil" class="profile-img me-2">
+                Portafolio Juan Nocetti
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a href="#" class="navbar-info">
+                        <img src="assets/info.jpg" alt="Info">
+                    </a>
+                </div>
+            </nav>
+            
         </div>
     </nav>
+    
 
-    <section class="about-me">
-        <h1>Sobre mí</h1>
-        <p>Soy un estudiante de Ingeniería en Informática en la Universidad Católica del Uruguay.</p>
-    </section>
+    <div class="container mt-4">
+        <img src="assets/ai.jpg" class="main-image img-fluid rounded-3" alt="Imagen de IA">
+    </div>
+    
 
-    <section class="course-section">
-        <h2>Unidades del Curso</h2>
-        <div class="unit-container">
-            <div class="unit-card">
-                <h3>UT1 - Introducción a IA</h3>
+
+    <div class="container redes-sociales mt-5 text-center">
+        <h3>Me puedes contactar en</h3>
+        <div class="d-flex justify-content-center">
+            <a href="https://www.linkedin.com/in/juan-nocetti-fierro-896aa125a/" target="_blank">
+                <img src="assets/linkedin.png" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="https://w.app/Ajxyhi" target="_blank" class="ms-4">
+                <img src="assets/wpp.png" alt="WhatsApp" class="social-icon-wpp">
+            </a>
+        </div>
+    </div>
+
+
+    <div id="unidadesCarrusel" class="carousel slide mt-5 carousel-dark" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <h3>INTRODUCION AL APRENDIZAJE AUTOMATICO</h3>
                 <p>Proyectos de la Unidad 1.</p>
             </div>
-            <div class="unit-card">
-                <h3>UT2 - Aprendizaje Automático</h3>
+            <div class="carousel-item">
+                <h3>TRATAMIENTO PREVIO DE LOS DATOS Y FUNDAMENTOS DE LOS ALGORITMOS DE ML</h3>
                 <p>Proyectos de la Unidad 2.</p>
             </div>
-            <div class="unit-card">
-                <h3>UT3 - Redes Neuronales</h3>
+            <div class="carousel-item">
+                <h3>ALGORITMOS LINEALES</h3>
                 <p>Proyectos de la Unidad 3.</p>
             </div>
+            <div class="carousel-item">
+                <h3>ALGORITMOS NO LINEALES - NAIVE BAYES, K-NN y FEATURE SELECTION</h3>
+                <p>Proyectos de la Unidad 4.</p>
+            </div>
+            <div class="carousel-item">
+                <h3>ALGORITMOS NO LINEALES - AD y SVM</h3>
+                <p>Proyectos de la Unidad 5.</p>
+            </div>
+            <div class="carousel-item">
+                <h3>APRENDIZAJE NO SUPERVISADO y MÉTODOS DE CLUSTERING</h3>
+                <p>Proyectos de la Unidad 6.</p>
+            </div>
+            <div class="carousel-item">
+                <h3>ENSAMBLES</h3>
+                <p>Proyectos de la Unidad 7.</p>
+            </div>
+            <div class="carousel-item">
+                <h3>AJUSTE, EVALUACIÓN y SINTONIA DE MODELOS</h3>
+                <p>Proyectos de la Unidad 8.</p>
+            </div>
         </div>
-    </section>
+        <button class="carousel-control-prev" type="button" data-bs-target="#unidadesCarrusel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#unidadesCarrusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+    
+  
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <p>© 2024 Portafolio Juan Nocetti</p>
+    </footer>
+    
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
