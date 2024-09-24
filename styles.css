@@ -1,133 +1,194 @@
-
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 1em; 
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
-    flex-grow: 1; 
+  flex-grow: 1;
 }
 
 footer {
-    background-color: #343a40;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    width: 100%;
-    position: relative;
-    bottom: 0;
-    margin-top: auto; 
-}
-
-.main-image {
-    max-height: 25em;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 2em;
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  margin-top: auto;
 }
 
 .carousel-item {
-    padding: 2em; 
-    text-align: center;
-    background-color: #f8f9fa;
-    border-radius: 1em;
+  padding: 2em;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 1em;
 }
 
 .carousel-container {
-    margin-bottom: 2em; 
+  margin-bottom: 2em;
 }
-
 
 .carousel-control-prev, .carousel-control-next {
-    background-color: rgba(238, 235, 235, 0.8);
-    width: 3em; 
-    height: 3em;
-    border-radius: 50%;
+  background-color: rgba(238, 235, 235, 0.8);
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
 }
 
-
-.profile-img {
-    width: 2.5em; 
-    height: 2.5em;
-    border-radius: 50%; 
-    object-fit: cover; 
+.navbar .container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar-brand {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  text-align: center;
 }
 
-.redes-sociales h3 {
-    margin-bottom: 1.5em;
-    color: #333;
+.profile-img {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5em;
+  margin-bottom: 2em; 
 }
 
 .social-icon {
-    width: 4em;
-    height: 4em;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-.social-icon-wpp {
-    width: 5em;
-    height: 5em;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+.hero-section {
+  position: relative;
+  background: url('assets/ai.webp') no-repeat center center/cover;
+  height: 20em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
 }
 
-.social-icon:hover,
-.social-icon-wpp:hover {
-    transform: scale(1.1);
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1.5em;
+  border-radius: 0.5em;
 }
 
-.navbar-info {
-    display: flex;
-    align-items: center;
-    color: #fff; 
-    text-decoration: none;
-    font-size: 1em;
+.hero-content h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
 }
 
-.navbar-info img {
-    width: 2em; 
-    margin-right: 0.5em;
+.hero-content p {
+  font-size: 1.2em;
+  line-height: 1.5em;
 }
 
-@media (max-width: 48em) {
-    .main-image {
-        max-height: 20em;
-        border-radius: 1.5em;
-    }
-
-    .carousel-item {
-        padding: 1.5em;
-    }
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 2em;
 }
 
-@media (max-width: 30em) {
-    .main-image {
-        max-height: 15em;
-    }
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
 
-    .carousel-item {
-        padding: 1em;
-    }
+.up, .down {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
 
-    footer {
-        padding: 0.5em;
-        font-size: 0.9em;
-    }
+.card1, .card2, .card3, .card4 {
+  width: 5.6em;
+  height: 5.6em;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0em 0.2em 0.5em -0.1em, rgba(0, 0, 0, 0.3) 0em 0.1em 0.3em -0.1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.whatsapp {
+  fill: #00ff00;
+}
+
+.linkedin {
+  fill: #0077b5;
+}
+
+.github {
+  fill: black;
+}
+
+.discord {
+  fill: #8c9eff;
+}
+
+.card1:hover {
+  background-color: #00ff00;
+}
+
+.card1:hover .whatsapp {
+  fill: white;
+}
+
+.card2:hover {
+  background-color: #0077b5;
+}
+
+.card2:hover .linkedin {
+  fill: white;
+}
+
+.card3:hover {
+  background-color: black;
+}
+
+.card3:hover .github {
+  fill: white;
+}
+
+.card4:hover {
+  background-color: #8c9eff;
+}
+
+.card4:hover .discord {
+  fill: white;
 }
