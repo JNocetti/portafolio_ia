@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TA4</title>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+
+    
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top transparent">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="../ut3.html">Back</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main data-spy="scroll" data-target=".navbar" data-offset="50">
+        
+        <div class="jumbotron photo-cover text-inverse">
+            <div class="col-md-6 text-center center">
+                <a href="#body">
+                    <span class="fa fa-chevron-down large-ut"></span>
+                </a>    
+            </div>    
+        </div>
+
+        <div id="body" class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>TA 4</h2>
+                        <h3>Exercise 1</h3>
+                        <ol>
+                            <li>Import the training dataset ("cardiac-training.csv") into RM.
+                                <ul>
+                                    <li>Set the attribute "2do_Ataque_Corazon" according to the problem. 
+                                        <strong>Why do we do this?</strong>
+                                        <p>We set the attribute to have values 1 and 0 for "Yes" and "No" respectively, which is necessary for the logistic regression model that requires all its inputs and outputs to be numeric variables.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Import the test/evaluation/prediction file ("cardiac-scoring.csv").
+                                <ul>
+                                    <li>Verify that the data type of the attributes is "integer".
+                                        <strong>Why do we do this?</strong>
+                                        <p>Ensuring that all attributes are of type "integer" allows us to use the linear regression model to interpret all independent variables and predict a specific input data point. If the data were not numeric, we could not use linear regression.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Run the model and compare the attribute ranges between the training and evaluation datasets.
+                                <ul>
+                                    <li><strong>How are these ranges comparably?</strong>
+                                        <p>The ranges are the same.</p>
+                                    </li>
+                                    <li><strong>Are all the attributes of the evaluation/prediction examples within the attribute ranges of the training dataset?</strong>
+                                        <p>Yes.</p>
+                                    </li>
+                                    <li><strong>Why do we need to verify this?</strong>
+                                        <p>This allows us to ensure that the data is consistent throughout the training and testing process of the model. This way, we make sure there are no noise or biases that interfere with the predictions obtained.</p>
+                                    </li>
+                                    <li><strong>Are there more data preparation tasks to be done?</strong>
+                                        <p>We should check the data distribution, normalize it, and generally clean up the presence of noise, outliers, correlated variables, replace or eliminate missing values, etc.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <h3>Exercise 2</h3>
+                        <img src="ej2 tabla.PNG" alt="">
+                        <p>New generated attributes:</p>
+                        <ul>
+                            <li>Prediction:</li>
+                            <li>Confidence (Yes)</li>
+                            <li>Confidence (No)</li>
+                        </ul>
+                        <img src="prediction_table.PNG" alt="">
+                        <p>A single man, 61 years old, with overweight but low cholesterol (139 and the average is 178).</p>
+                        <ul>
+                            <li>He is in the middle of the class for anxiety treatment (50) and has participated in stress management.</li>
+                            <li><strong>The model gives us xx% confidence that the prediction "No" is correct, leaving us with a (1-xx%) doubt. What would Dr. García's decision be for this patient?</strong>
+                                <p>This leaves us with a low doubt of about 10%, which makes us think that Dr. García could trust the model and believe that this patient does not face a potential risk.</p>
+                            </li>
+                        </ul>
+                        <p>Now let's look at tuple 11: A divorced man, 66 years old, is above the average in all predictors (analyze).</p>
+                        <ul>
+                            <li>We have 99.3% confidence in the prediction of a second heart attack.</li>
+                            <li><strong>What would Dr. García's decision be for this patient?</strong></li>
+                            <li><strong>How can we use the prediction in a consulting case or the development of a real system?</strong>
+                                <p>When making decisions for a consultation, the prediction could be used to establish a priority order for care, where patients at high risk of a second attack would have priority for attention.</p>
+                            </li>
+                            <li><strong>How many patients have a prediction of a heart attack? Consider the confidence levels.</strong>
+                                <p>365 is the number of patients with this type of prediction. Of these, 213 have a value greater than 90% confidence in the prediction.</p>
+                            </li>
+                            <li><strong>How could we analyze the global performance of the model in RM?</strong>
+                                <p>We should have a dataset that has not been seen by the model and that has the result for each person. This way, we could evaluate the model's performance on an unseen dataset.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <h3>Downloadable Files</h3>
+                <ul>
+                    <li><a href="TA4_Ej4.ipynb" download>Jupyter Notebook File</a></li>
+                    <li><a href="TA4.rmp" download>Processes File</a></li>
+                    <li><a href="TA4_comparacion_python.rmp" download>Comparison Processes File</a></li>
+                </ul>
+            </div>
+        </div>
+        
+
+    
+    
+
+            <footer>
+                <p>© 2024 Portfolio Juan Nocetti</p>
+            </footer>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../scripts.js"></script>
+</body>
+</html>

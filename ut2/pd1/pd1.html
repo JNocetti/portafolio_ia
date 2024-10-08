@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PD1</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top transparent">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="../ut2.html">Back</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main data-spy="scroll" data-target=".navbar" data-offset="50">
+
+        <div class="jumbotron photo-cover text-inverse">
+            <div class="col-md-6 text-center center">
+                <a href="#body">
+                    <span class="fa fa-chevron-down large-ut"></span>
+                </a>
+            </div>
+        </div>
+
+        <div id="body" class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>PD1</h2>
+                        <h3>Data Treatment Findings</h3>
+
+                        <h4>Exercise 1</h4>
+                        <p><strong>Imputation of Missing Values:</strong></p>
+                        <p>The average imputation method was used for missing values in numerical columns such as Age
+                            and Passenger Fare, allowing for reasonable values to be obtained for incomplete records. In
+                            categorical columns such as Embarked (port of boarding), missing values were imputed with
+                            the most frequent value (Mode), which in this case is Southampton. For the columns SibSp and
+                            Parch, missing values were imputed with 0 as many passengers traveled alone.</p>
+
+                        <p><strong>Application of Filters:</strong></p>
+                        <p>Filters were applied to maintain only the examples with:</p>
+                        <ul>
+                            <li>Age between 0 and 80 years, representing a reasonable range of ages.</li>
+                            <li>Passenger fares less than or equal to 500, eliminating possible outliers in the highest
+                                fares.</li>
+                            <li>Number of siblings/spouses less than or equal to 8 and number of parents/children less
+                                than or equal to 9, values that correspond to the real maximums in the dataset.</li>
+                        </ul>
+                        <p>These filters allowed for reducing the dataset by eliminating possible extreme values
+                            (outliers).</p>
+
+                        <p><strong>General Results:</strong></p>
+                        <p>The final dataset contains examples with a more reasonable age range and fares that do not
+                            include extreme outliers. The filtering of the family columns on board allowed us to observe
+                            that most passengers traveled without siblings/spouses or with few relatives. There are
+                            fewer columns, only the necessary and most relevant ones for survival analysis.</p>
+                        <img src="image1.PNG" alt="">
+                        <h4>Normalization and Outlier Detection</h4>
+                        <p><strong>Normalization of Attributes:</strong></p>
+                        <p>Normalization was performed on the selected numerical attributes (Age, Passenger Fare, No of
+                            Parents or Children on Board, and No of Siblings or Spouses on Board).</p>
+                        <p><strong>Methods of normalization used:</strong></p>
+                        <ul>
+                            <li>Z-Score: To standardize the Age and No of Siblings or Spouses on Board attributes with a
+                                mean of 0 and standard deviation of 1, facilitating the detection of extreme values.
+                            </li>
+                            <li>Range (0 to 1): Applied to the No of Parents or Children on Board and Passenger Fare
+                                attributes, scaling their values to a common range between 0 and 1.</li>
+                        </ul>
+                        <p><strong>Impact of normalization:</strong> Normalization allows numerical data to have a
+                            comparable scale, which is important to ensure balanced analysis in machine learning
+                            algorithms that are sensitive to scale.</p>
+
+                        <p><strong>Outlier Detection:</strong></p>
+                        <p>The outlier detection technique based on distance was applied using the Euclidean distance
+                            function and considering the 5 nearest neighbors. The process was configured to detect 10
+                            outliers. These examples were filtered and excluded from the final dataset.</p>
+                        <p>Results of outlier detection: No examples in the final set were labeled as outliers (all have
+                            outlier = false), indicating that previously detected outliers were eliminated.</p>
+                        <h4>Graph without Normalization</h4>
+                        <img src="image2.PNG" alt="">
+                        <h4>Graph with Normalization</h4>
+                        <img src="image3.PNG" alt="">
+                        <h4>Outliers found</h4>
+                        <img src="image4.PNG" alt="">
+                        <h4>The first 25 values ​​excluding the 10 outliers</h4>
+                        <img src="image5.PNG" alt="">
+                        <h4>Exercise 2</h4>
+                        <p><strong>Problem Description:</strong></p>
+                        <p>The "Wine" dataset contains information about various chemical properties of wines grown in a
+                            specific region of Italy derived from three different cultivars. The objective of this
+                            analysis is to classify the wines into one of these three classes using the 13 chemical
+                            attributes present in the dataset.</p>
+
+                        <p><strong>Attributes of the Dataset:</strong></p>
+                        <ul>
+                            <li><strong>Alcohol:</strong> Percentage of alcohol in the wine.</li>
+                            <li><strong>Malic Acid:</strong> Concentration of malic acid in the wine.</li>
+                            <li><strong>Ash:</strong> Amount of ash produced after the combustion of the components of
+                                the wine.</li>
+                            <li><strong>Alcalinity of Ash:</strong> Measure of the alkalinity of the ashes.</li>
+                            <li><strong>Magnesium:</strong> Magnesium content, a mineral that can influence the
+                                structure of the wine.</li>
+                            <li><strong>Total Phenols:</strong> Total amount of phenols that affect both the color and
+                                flavor of the wine.</li>
+                            <li><strong>Flavonoids:</strong> Subgroup of phenols that also influence the color and
+                                flavor of the wine.</li>
+                            <li><strong>Nonflavonoid Phenols:</strong> Phenols that do not belong to the flavonoid
+                                group.</li>
+                            <li><strong>Proanthocyanins:</strong> Compounds that contribute to the astringency or
+                                dryness of the wine.</li>
+                            <li><strong>Color Intensity:</strong> Intensity of the color of the wine.</li>
+                            <li><strong>Hue:</strong> Hue of the wine.</li>
+                            <li><strong>OD280/OD315 of Diluted Wines:</strong> A measure that assesses the quality of
+                                the wine based on phenol content.</li>
+                            <li><strong>Proline:</strong> Content of proline, an amino acid associated with the aroma
+                                and flavor of the wine.</li>
+                        </ul>
+
+                        <h2>Basic Attribute Statistics:</h2>
+                        <ol>
+                            <li><strong>Attribute 1 (Wine Class)</strong>:
+                                <ul>
+                                    <li><strong>Type</strong>: Integer.</li>
+                                    <li><strong>Mean</strong>: 1.944.</li>
+                                    <li><strong>Standard Deviation</strong>: 0.774.</li>
+                                    <li><strong>Distribution</strong>: There are three wine classes (1, 2, and 3) with a
+                                        fairly balanced distribution among them.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Alcohol</strong>:
+                                <ul>
+                                    <li><strong>Type</strong>: Real.</li>
+                                    <li><strong>Range</strong>: [11.03, 14.83].</li>
+                                    <li><strong>Mean</strong>: 12.994.</li>
+                                    <li><strong>Standard Deviation</strong>: 0.809.</li>
+                                    <li><strong>Distribution</strong>: Alcohol values are mostly concentrated between 12
+                                        and 14 degrees.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Malic Acid</strong>:
+                                <ul>
+                                    <li><strong>Type</strong>: Real.</li>
+                                    <li><strong>Range</strong>: [0.74, 5.80].</li>
+                                    <li><strong>Mean</strong>: 2.340.</li>
+                                    <li><strong>Standard Deviation</strong>: 1.119.</li>
+                                    <li><strong>Distribution</strong>: Malic acid values show higher concentration at
+                                        low values (between 1 and 2), with some values more dispersed towards 5.8.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Ash</strong>:
+                                <ul>
+                                    <li><strong>Type</strong>: Real.</li>
+                                    <li><strong>Range</strong>: [1.36, 3.23].</li>
+                                    <li><strong>Mean</strong>: 2.366.</li>
+                                    <li><strong>Standard Deviation</strong>: 0.275.</li>
+                                    <li><strong>Distribution</strong>: Most wines have ash values around 2.3, with
+                                        little variation.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Alkalinity of Ash</strong>:
+                                <ul>
+                                    <li><strong>Type</strong>: Real.</li>
+                                    <li><strong>Range</strong>: [10.60, 30.0].</li>
+                                    <li><strong>Mean</strong>: 19.517.</li>
+                                    <li><strong>Standard Deviation</strong>: 3.336.</li>
+                                    <li><strong>Distribution</strong>: There is some dispersion in the alkalinity of
+                                        ash, with most wines between 15 and 25.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Magnesium</strong>:
+                                <ul>
+                                    <li><strong>Type</strong>: Integer.</li>
+                                    <li><strong>Range</strong>: [70, 162].</li>
+                                    <li><strong>Mean</strong>: 99.588.</li>
+                                    <li><strong>Standard Deviation</strong>: 14.174.</li>
+                                    <li><strong>Distribution</strong>: Magnesium content is mostly concentrated around
+                                        100.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Total Phenols</strong>:
+                                <ul>
+                                    <li><strong>Type</strong>: Real.</li>
+                                    <li><strong>Range</strong>: [0.98, 3.88].</li>
+                                    <li><strong>Mean</strong>: 2.292.</li>
+                                    <li><strong>Standard Deviation</strong>: 0.626.</li>
+                                    <li><strong>Distribution</strong>: Most wines have total phenol values between 2 and
+                                        3.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Flavonoids</strong>:
+                                <ul>
+                                    <li><strong>Type</strong>: Real.</li>
+                                    <li><strong>Range</strong>: [0.34, 5.08].</li>
+                                    <li><strong>Mean</strong>: 2.023.</li>
+                                    <li><strong>Standard Deviation</strong>: 0.999.</li>
+                                    <li><strong>Distribution</strong>: Flavonoid values are more concentrated between
+                                        1.5 and 3, with some values dispersed up to 5.08.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Non-flavonoid Phenols</strong>:
+                                <ul>
+                                    <li><strong>Type</strong>: Real.</li>
+                                    <li><strong>Range</strong>: [0.13, 0.66].</li>
+                                    <li><strong>Mean</strong>: 0.362.</li>
+                                    <li><strong>Standard Deviation</strong>: 0.125.</li>
+                                    <li><strong>Distribution</strong>: Non-flavonoid phenol values are mostly
+                                        concentrated between 0.2 and 0.4.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Proanthocyanins</strong>:
+                                <ul>
+                                    <li><strong>Type</strong>: Real.</li>
+                                    <li><strong>Range</strong>: [0.41, 3.58].</li>
+                                    <li><strong>Mean</strong>: 1.587.</li>
+                                    <li><strong>Standard Deviation</strong>: 0.572.</li>
+                                    <li><strong>Distribution</strong>: Concentration of values around 1.5 to 2.5.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Color Intensity</strong>:
+                                <ul>
+                                    <li><strong>Type</strong>: Real.</li>
+                                    <li><strong>Range</strong>: [1.28, 13.0].</li>
+                                    <li><strong>Mean</strong>: 5.055.</li>
+                                    <li><strong>Standard Deviation</strong>: 2.324.</li>
+                                    <li><strong>Distribution</strong>: Wide dispersion with a concentration around 4 to
+                                        6.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Hue</strong>:
+                                <ul>
+                                    <li><strong>Type</strong>: Real.</li>
+                                    <li><strong>Range</strong>: [0.48, 1.71].</li>
+                                    <li><strong>Mean</strong>: 0.957.</li>
+                                    <li><strong>Standard Deviation</strong>: 0.229.</li>
+                                    <li><strong>Distribution</strong>: Hue values concentrated between 0.8 and 1.2.</li>
+                                </ul>
+                            </li>
+                            <li><strong>OD280/OD315</strong>:
+                                <ul>
+                                    <li><strong>Type</strong>: Real.</li>
+                                    <li><strong>Range</strong>: [1.27, 4.00].</li>
+                                    <li><strong>Mean</strong>: 2.604.</li>
+                                    <li><strong>Standard Deviation</strong>: 0.705.</li>
+                                    <li><strong>Distribution</strong>: The OD280/OD315 ratio has a distribution mostly
+                                        between 2.0 and 3.0.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Proline</strong>:
+                                <ul>
+                                    <li><strong>Type</strong>: Integer.</li>
+                                    <li><strong>Range</strong>: [278, 1680].</li>
+                                    <li><strong>Mean</strong>: 745.096.</li>
+                                    <li><strong>Standard Deviation</strong>: 314.884.</li>
+                                    <li><strong>Distribution</strong>: Wide dispersion of values, with an average around
+                                        700 to 800.</li>
+                                </ul>
+                            </li>
+                        </ol>
+
+
+                        <h3>Downloadable Files</h3>
+                        <ul>
+                            <li><a href="ej1_parte1.rmp" download>Processes File</a></li>
+                            <li><a href="ej1_parte2.rmp" download>Processes File</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <footer>
+            <p>© 2024 Portfolio Juan Nocetti</p>
+        </footer>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../scripts.js"></script>
+</body>
+
+</html>

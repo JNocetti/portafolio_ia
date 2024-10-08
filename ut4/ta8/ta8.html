@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TA8</title>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+
+    
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top transparent">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="../ut4.html">Back</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main data-spy="scroll" data-target=".navbar" data-offset="50">
+        
+        <div class="jumbotron photo-cover text-inverse">
+            <div class="col-md-6 text-center center">
+                <a href="#body">
+                    <span class="fa fa-chevron-down large-ut"></span>
+                </a>    
+            </div>    
+        </div>
+
+        <div id="body" class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>TA 8</h2>
+                        <h3>Exercise 1</h3>
+                        <p>
+                            The prediction indicates that the point belongs to class 1. 
+                            For the values of k:
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>1:</strong> Y = 1
+                            </li>
+                            <li>
+                                <strong>2:</strong> We obtain one neighbor of type 0 and another of type 1. Since the neighbor of type 0 is closer to the entered value, we keep that prediction. 
+                                This was done manually, so weights should be calculated for a larger dataset.
+                            </li>
+                        </ul>
+        
+                        <h3>Exercise 2</h3>
+                        <p>
+                            The graph shows a distribution of data in three well-defined classes according to the "petal_width" and "petal_length" attributes. 
+                            It also shows that the classes "iris-versicolor" and "iris-virginica" are not as separated, meaning that there are mixed data and care must be taken with the chosen value of "k" when using the k-nn algorithm.
+                        </p>
+                        <p>
+                            First of all, the data should be normalized to fit on the same scale and thus create a feasible model. The "id" column could be eliminated as it does not add value to the prediction.
+                        </p>
+                        <p>
+                            <strong>k-nn:</strong>
+                            <ul>
+                                <li><strong>k:</strong> Determines the number of closest neighbors to consider when making the prediction.</li>
+                                <li><strong>Weighted voting:</strong> The distances between examples are also taken into account when making the prediction. This helps determine how much each neighbor will weigh depending on its distance from the example. The closer, the more weight.</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <strong>Types of measurement:</strong>
+                            <ul>
+                                <li><strong>Mixed:</strong> Calculates distances in nominal and numerical attributes.</li>
+                                <li><strong>Nominal:</strong> Calculates distances only in nominal attributes.</li>
+                                <li><strong>Numerical:</strong> Calculates distances only in numerical attributes.</li>
+                                <li><strong>Bregman divergences:</strong> More generic approaches that do not comply with the triangle inequality or symmetry.</li>
+                            </ul>
+                        </p>
+                        <h3>k Value Results</h3>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Value of k</th>
+                                    <th>Function</th>
+                                    <th>Accuracy</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Numerical</td>
+                                    <td>93.33</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Numerical</td>
+                                    <td>92.00</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Mixed</td>
+                                    <td>93.33</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Mixed</td>
+                                    <td>92.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>Downloadable Files</h3>
+                            <ul>
+                            <li><a href="TA8-KVecinosMasCercanos.xlsx" download>Excel File</a></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+
+    
+    
+
+            <footer>
+                <p>© 2024 Portfolio Juan Nocetti</p>
+            </footer>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../scripts.js"></script>
+</body>
+</html>
