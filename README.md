@@ -33,7 +33,7 @@ The projects are developed using various technologies, including:
 
 If you wish to get in touch with me, you can find me on the following platforms:
 
-- [WhatsApp]()
+- [WhatsApp](https://wa.link/4ma2qq)
 - [LinkedIn](https://www.linkedin.com/in/juan-nocetti-fierro-896aa125a/)
 - [GitHub](https://github.com/JNocetti)
 
