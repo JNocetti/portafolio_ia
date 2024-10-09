@@ -72,6 +72,12 @@ p, .lead {
   color: #102336;
 }
 
+.text-study-case {
+  color: white;
+  margin-top: 2em;
+  text-align: center;
+}
+
 
 .thumbnail {
   position: relative;
