@@ -187,26 +187,19 @@
                 of crime.
               </p>
 
-              <h3 class="text-study-case">
-                ZN:
-              </h3>
+              <h3 class="text-study-case">ZN:</h3>
               <p class="text-study-case">
-                Proportion of land designated for large residential lots. 
-                Areas with more large lots
-                tend to have more expensive properties.
+                Proportion of land designated for large residential lots. Areas
+                with more large lots tend to have more expensive properties.
               </p>
 
-              <h3 class="text-study-case">
-                INDUS:
-              </h3>
+              <h3 class="text-study-case">INDUS:</h3>
               <p class="text-study-case">
                 Proportion of acres used for non-retail businesses. Industrial
                 areas can reduce the residential appeal of a neighborhood.
               </p>
 
-              <h3 class="text-study-case">
-                CHAS:
-              </h3>
+              <h3 class="text-study-case">CHAS:</h3>
               <p class="text-study-case">
                 Indicator of proximity to the Charles River (1 if near, 0 if
                 not). Areas near bodies of water may have higher property
@@ -220,34 +213,26 @@
                 less desirable areas.
               </p>
 
-              <h3 class="text-study-case">
-                RM:
-              </h3>
+              <h3 class="text-study-case">RM:</h3>
               <p class="text-study-case">
                 Average number of rooms per dwelling. Homes with more rooms are
                 generally larger and have a higher value.
               </p>
 
-              <h3 class="text-study-case">
-                AGE:
-              </h3>
+              <h3 class="text-study-case">AGE:</h3>
               <p class="text-study-case">
                 Proportion of owner-occupied units built before 1940. Areas with
                 a higher percentage of older homes may have lower values.
               </p>
 
-              <h3 class="text-study-case">
-                DIS:
-              </h3>
+              <h3 class="text-study-case">DIS:</h3>
               <p class="text-study-case">
                 Weighted distance to the five major employment centers in
                 Boston. A shorter distance to work centers tends to increase
                 housing value.
               </p>
 
-              <h3 class="text-study-case">
-                RAD:
-              </h3>
+              <h3 class="text-study-case">RAD:</h3>
               <p class="text-study-case">
                 Index measuring accessibility to radial highways. Improved
                 accessibility tends to positively influence property values.
@@ -259,18 +244,14 @@
                 negatively impact housing prices.
               </p>
 
-              <h3 class="text-study-case">
-                PTRATIO:
-              </h3>
+              <h3 class="text-study-case">PTRATIO:</h3>
               <p class="text-study-case">
                 Pupil-teacher ratio by locality. Areas with a lower
                 pupil-teacher ratio are more desirable, which can elevate house
                 values.
               </p>
 
-              <h3 class="text-study-case">
-                B:
-              </h3>
+              <h3 class="text-study-case">B:</h3>
               <p class="text-study-case">
                 Proportion of the African-American population. Historically,
                 this attribute has been used in statistical models to identify
@@ -278,22 +259,193 @@
                 to ethical concerns.
               </p>
 
-              <h3 class="text-study-case">
-                LSTAT:
-              </h3>
+              <h3 class="text-study-case">LSTAT:</h3>
               <p class="text-study-case">
                 Percentage of the population with a low socioeconomic status. A
                 higher LSTAT value tends to be associated with lower housing
                 prices.
               </p>
 
-              <h3 class="text-study-case">
-                MED:
-              </h3>
+              <h3 class="text-study-case">MED:</h3>
               <p class="text-study-case">
                 Median value of owner-occupied homes (in thousands of dollars).
                 This is the target attribute that we aim to predict in the
                 analysis.
+              </p>
+              <h2 class="text-study-case">
+                Attribute Analysis and Data Preparation
+              </h2>
+              <p class="text-study-case">
+                The process of attribute analysis and data preparation is
+                carried out to better understand the structure of the dataset
+                and ensure that the data is ready to be used in predictive
+                models. Below are the steps that will be taken:
+              </p>
+
+              <h3 class="text-study-case">
+                1. Exploratory Data Analysis (EDA)
+              </h3>
+              <p class="text-study-case">
+                <strong>Attribute Distribution:</strong> <br />Distribution of
+                the attributes will be analyzed using histograms to identify
+                patterns and possible biases in the data.
+              </p>
+              <p class="text-study-case">
+                <strong>Outlier Detection:</strong> <br />Boxplots will be used
+                to identify outlier values that could distort the analysis.
+              </p>
+
+              <h3 class="text-study-case">
+                2. Normalization and Scaling of Data
+              </h3>
+              <p class="text-study-case">
+                <strong>Process Description:</strong> <br />Normalization or
+                scaling will be applied to ensure that all numeric attributes
+                are on the same scale.
+              </p>
+
+              <h3 class="text-study-case">3. Handling Missing Values</h3>
+              <p class="text-study-case">
+                <strong>Missing Value Analysis:</strong> <br />The existence of
+                missing values in the dataset will be checked and how to proceed
+                in such cases.
+              </p>
+
+              <h3 class="text-study-case">
+                4. Correlation Analysis Between Attributes
+              </h3>
+              <p class="text-study-case">
+                <strong>Correlation Matrix Calculation:</strong> <br />The
+                correlation between attributes will be calculated to identify
+                strong or weak relationships among them.
+              </p>
+
+              <h3 class="text-study-case">
+                5. Selection of Relevant Attributes
+              </h3>
+              <p class="text-study-case">
+                <strong>Selection Process:</strong> <br />A feature selection
+                analysis will be conducted to determine which attributes have
+                the greatest impact on prediction, and we will keep only those.
+              </p>
+
+              <h3 class="text-study-case">Attribute Distribution Analysis</h3>
+              <p class="text-study-case">
+                The distribution of each attribute can be identified through the
+                graphical visualization of its values. Accordingly, here are the
+                graphs:
+              </p>
+
+              <div class="text-center">
+                <img src="assets/study_case/1.png" alt="" />
+                <img
+                  src="assets/study_case/2.png"
+                  alt=""
+                  style="margin-top: 1em"
+                />
+                <img
+                  src="assets/study_case/3.png"
+                  alt=""
+                  style="margin-top: 1em"
+                />
+                <img
+                  src="assets/study_case/4.png"
+                  alt=""
+                  style="margin-top: 1em"
+                />
+              </div>
+
+              <h3 class="text-study-case">
+                According to the histograms, we can analyze the following:
+              </h3>
+              <p class="text-study-case">
+                <strong>CRIM (Crime Rate per Capita):</strong> Right-skewed
+                distribution, with many low values and some high values that may
+                be outliers.
+              </p>
+              <p class="text-study-case">
+                <strong
+                  >ZN (Proportion of Residential Land Zoned for Large
+                  Lots):</strong
+                >
+                Highly right-skewed distribution, with most values concentrated
+                near zero.
+              </p>
+              <p class="text-study-case">
+                <strong
+                  >INDUS (Proportion of Non-Retail Business Acres per
+                  Town):</strong
+                >
+                Approximately normal distribution but slightly right-skewed.
+              </p>
+              <p class="text-study-case">
+                <strong>CHAS (Charles River Dummy Variable):</strong>
+                Categorical (binary) distribution, with most values at zero.
+              </p>
+              <p class="text-study-case">
+                <strong>NOX (Nitric Oxide Concentration):</strong> Right-skewed
+                distribution.
+              </p>
+              <p class="text-study-case">
+                <strong>RM (Average Number of Rooms per Dwelling):</strong>
+                Approximately normal distribution, though with a slight right
+                skew.
+              </p>
+              <p class="text-study-case">
+                <strong
+                  >AGE (Proportion of Owner-Occupied Units Built Before
+                  1940):</strong
+                >
+                Left-skewed distribution, with many high values close to 100.
+              </p>
+              <p class="text-study-case">
+                <strong>DIS (Weighted Distance to Employment Centers):</strong>
+                Right-skewed distribution, with a greater concentration of low
+                values.
+              </p>
+              <p class="text-study-case">
+                <strong>RAD (Index of Accessibility to Highways):</strong>
+                Right-skewed distribution, with some significantly high values.
+              </p>
+              <p class="text-study-case">
+                <strong>TAX (Property Tax Rate):</strong> Bimodal distribution,
+                with some values heavily concentrated around two peaks.
+              </p>
+              <p class="text-study-case">
+                <strong>PTRATIO (Pupil-Teacher Ratio by Town):</strong>
+                Approximately normal distribution with a slight concentration of
+                high values.
+              </p>
+              <p class="text-study-case">
+                <strong>B (Proportion of African-American Population):</strong>
+                Left-skewed distribution, with a high concentration of values
+                close to the maximum.
+              </p>
+              <p class="text-study-case">
+                <strong>LSTAT (Percentage of Lower Status Population):</strong>
+                Right-skewed distribution, with a high concentration of low
+                values.
+              </p>
+              <p class="text-study-case">
+                <strong>MEDV (Median Value of Owner-Occupied Homes):</strong>
+                Approximately normal distribution, with a slight right skew.
+              </p>
+
+              <p class="text-study-case">
+                Most attributes exhibit a right skew, indicating a concentration
+                of low values with the presence of some high values, which
+                suggests the existence of outliers. These extreme values can
+                negatively influence the performance of certain algorithms if
+                not properly addressed. Therefore, it is advisable to apply
+                processes such as normalization or specific transformations to
+                adjust the distributions and reduce the impact of outliers, thus
+                achieving a more suitable dataset for analysis and predictive
+                models.
+              </p>
+
+              <p class="text-study-case">
+                With that said, we will proceed by applying outlier detection
+                and then the normalization process.
               </p>
             </div>
           </div>
